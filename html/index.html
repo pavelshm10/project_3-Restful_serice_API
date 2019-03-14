@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/index.js"></script>
+    <script src="/js/getData.js"></script>
+</head>
+<body>  
+<div class="container-fluid">
+<div class="raw">
+    <nav class="navbar navbar-expand-lg navbar-light">
+    <div id="navbarSupportedContent" class="col-12 col-sm-3  col-md-6 col-lg-12">
+        <ul id="nav" class="navbar-nav mr-auto">
+            
+            <button class="bLinks"><a class="nav-link links" id="homeLink">
+                Home
+            </a></button>
+            
+            <button class="bLinks"><a class="nav-link links" id="reportLink">
+                Live Reports
+            </a></button>
+       
+            <button class="bLinks"><a class="nav-link links" id="aboutLink">           
+                About
+            </a></button>
+        </ul>   
+        
+        <div id="search" class="form-inline my-2 my-lg-0"></form>
+                <input class="form-control mr-sm-2 searchInput" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline my-2 my-sm-0 search bLinks" type="submit">Search</button>
+        </div> 
+    </div>
+    </nav>
+</div>
+<div class="raw">
+    <br><br>
+    <div id="header" class="col-12 col-sm-3  col-md-6 col-lg-12">    
+            <h1><b>CRYPTO NITE</b></h1>
+            <img id="img" src="/assets/images/coins.png">
+    </div>
+</div><!-- raw -->
+<br><br><br><br><br><br><br> 
+
+<div class="raw">
+    <div id="home" class="col-12 col-sm-3  col-md-6 col-lg-12">  
+    </div>
+    <div  id="report" class="col-12 col-sm-3  col-md-6 col-lg-12">
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    </div>
+    <div  id="about" class="col-12 col-sm-3  col-md-6 col-lg-12">
+        <h1><u>Pavel Shmilevich</u></h1>
+        <p><strong>Age:30<br>
+            City: Mikhmoret<br>
+            Country: Israel<br>
+            Birth Date: 01/06/1988<br>
+            Hobbies: surfing,soccer,guitar
+            vision: programmer in High Tech company<br><br>
+            <img src="/assets/images/pavel.jpg" height="250" width="300">
+        <strong></p>
+        
+    </div>
+</div><!-- raw -->
+</div><!-- container -->    
+ 
+<!-- modal for loader --> 
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+            <div class="loader"></div>
+        </div>
+    <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    
+    </div>
+</div>
+
+<!-- modal for checkbox, 5 coins --> 
+<div id="checkModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">You can choose only 5 coins for report, plaese choose coin from the list to replace:</h4>
+        </div>
+        <div class="modal-body" id="list">    
+        </div>
+        <div class="modal-footer">
+            <button id="checkBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
